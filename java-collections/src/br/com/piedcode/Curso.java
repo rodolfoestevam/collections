@@ -56,5 +56,19 @@ public class Curso {
 		return Collections.unmodifiableSet(alunos);
 	}
 
+	public boolean estaMatriculado(Aluno aluno) {
+		return this.alunos.contains(aluno);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		Aluno outroAluno = (Aluno) obj;
+		return super.equals(obj);
+	}
+
+	@Override
+	public int hashCode() {
+		return this.nome.charAt(0);
+	}
 	// java8 - this.aulas.stream().mapToInt(Aula::getTempo).sum();
 }
